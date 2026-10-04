@@ -1,0 +1,28 @@
+@startuml "Components-AlToDu-Frontend"
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Al ToDu - Component Diagram (Bounded Contexts)
+
+Container_Boundary(spa, "Single Page Application (Vue / PrimeVue)") {
+    Component(taskContext, "Task Management", "Vue, PrimeVue", "Gestión de tareas, listas, estados e ítems de seguimiento")
+    Component(aiContext, "AI Assistance", "Vue, PrimeVue", "Desglose automático y recomendaciones inteligentes de tareas")
+    Component(profilesContext, "Profiles", "Vue", "Gestión de perfil y preferencias de usuario")
+    Component(iamContext, "IAM", "Vue", "Autenticación, roles y control de sesión")
+    Component(shared, "Shared Kernel", "JS Modules", "DateTime, Url, uuid, HttpCommon, ErrorInterceptor y Layout")
+}
+
+System_Ext(backendApi, "Al ToDu Backend API", "REST API que persiste y procesa las operaciones del sistema")
+System_Ext(openAiService, "LLM Service / Provider", "Servicio externo de inferencia e IA")
+
+Rel(taskContext, shared, "Usa DateTime, uuid e HttpCommon")
+Rel(aiContext, shared, "Usa HttpCommon y ErrorInterceptor")
+Rel(profilesContext, shared, "Usa StringValidator y HttpCommon")
+Rel(iamContext, shared, "Usa HttpCommon y ErrorInterceptor")
+
+Rel(taskContext, backendApi, "Sincroniza tareas y proyectos [JSON/HTTPS]")
+Rel(aiContext, backendApi, "Solicita planes y sugerencias de tareas [JSON/HTTPS]")
+Rel(profilesContext, backendApi, "Consulta y actualiza perfiles [JSON/HTTPS]")
+Rel(iamContext, backendApi, "Autentica credenciales y tokens [JSON/HTTPS]")
+
+Rel(backendApi, openAiService, "Procesa prompts y genera respuestas estructuradas [HTTPS]")
+@enduml
