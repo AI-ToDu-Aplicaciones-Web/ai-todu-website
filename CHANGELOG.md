@@ -80,3 +80,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Corrección de codificación de caracteres en `index.html` agregando `<meta charset="utf-8">`.
 - Solución de renderizado de la interfaz mediante la importación global de PrimeVue, PrimeFlex y PrimeIcons en `main.js`.
+
+## [0.5.2] - 2026-10-07
+
+### Fixed
+- Migración del maquetado HTML desde `index.html` hacia el componente principal `src/app.vue` para solucionar el error de sobrescritura de renderizado (pantalla en blanco) provocado por el montaje del framework.
