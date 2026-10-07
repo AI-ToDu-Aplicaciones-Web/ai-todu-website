@@ -91,3 +91,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Integración de `vue-router` para la navegación entre el Landing Page y el Bounded Context de IAM (Login/Registro).
 - Configuración de `vue-i18n` soportando los idiomas `en_US` y `es_419` cumpliendo con los criterios de internacionalización.
+
+## [0.7.0] - 2026-10-07
+
+### Added
+- Integración de diccionarios JSON de traducción (`en.json` y `es.json`) centralizando el contenido estático.
+- Componente `LanguageSwitcher` implementado con `<pv-select-button>` para cambiar el idioma globalmente.
