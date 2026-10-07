@@ -59,4 +59,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `profileStore.js` para manejar el estado del perfil en la aplicación.
 - Componentes visuales `ProfileCard.vue` y `ProfileForm.vue` construidos con PrimeVue.
 
+## [0.4.0] - 2026-10-07
 
+### Added
+- Bounded Context `shared`: Implementación del núcleo compartido (Shared Kernel) para código transversal a toda la aplicación.
+- Objetos de valor `DateTime` y validadores estáticos en `StringValidator` dentro de la capa de dominio.
+- Configuración centralizada de Axios en `http-common.js` con un `errorInterceptor` para normalizar respuestas fallidas en la capa de infraestructura.
