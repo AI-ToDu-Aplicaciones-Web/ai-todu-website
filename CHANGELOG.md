@@ -74,3 +74,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `task-api.js` conectado al interceptor global y `task.assembler.js` para mapear los recursos HTTP a entidades de dominio.
 - `taskStore.js` para orquestar la reactividad y las mutaciones de estado de las tareas.
 - Componentes de presentación `TaskForm.vue` para la creación y `TaskList.vue` basado en DataTable para la visualización y actualización de tareas.
+
+## [0.5.1] - 2026-10-07
+
+### Fixed
+- Corrección de codificación de caracteres en `index.html` agregando `<meta charset="utf-8">`.
+- Solución de renderizado de la interfaz mediante la importación global de PrimeVue, PrimeFlex y PrimeIcons en `main.js`.
