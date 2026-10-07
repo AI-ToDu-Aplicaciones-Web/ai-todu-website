@@ -65,3 +65,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bounded Context `shared`: Implementación del núcleo compartido (Shared Kernel) para código transversal a toda la aplicación.
 - Objetos de valor `DateTime` y validadores estáticos en `StringValidator` dentro de la capa de dominio.
 - Configuración centralizada de Axios en `http-common.js` con un `errorInterceptor` para normalizar respuestas fallidas en la capa de infraestructura.
+
+## [0.5.0] - 2026-10-07
+
+### Added
+- Bounded Context `task-management`: Funcionalidad principal (Core Domain) para la gestión de tareas de la aplicación.
+- Entidad `Task` y Value Object `TaskId` para la integridad de los datos en memoria.
+- `task-api.js` conectado al interceptor global y `task.assembler.js` para mapear los recursos HTTP a entidades de dominio.
+- `taskStore.js` para orquestar la reactividad y las mutaciones de estado de las tareas.
+- Componentes de presentación `TaskForm.vue` para la creación y `TaskList.vue` basado en DataTable para la visualización y actualización de tareas.
