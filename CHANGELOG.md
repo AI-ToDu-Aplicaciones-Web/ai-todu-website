@@ -31,3 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configuración de los esquemas de entidades, DTOs y *Assemblers* para aislar la capa de UI de la infraestructura de red.
 - Archivos de internacionalización para inglés y español en `public/i18n/`.
 - Flujos de trabajo de GitHub Actions (`azure-static-web-apps.yml`) preparados para el despliegue de IC/DC.
+- Implementación de la sección "Beneficios" en el Landing Page para comunicar el valor del producto usando componentes de PrimeVue.
+
+
