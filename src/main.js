@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import './style.css';
 import { router } from './router.js';
 import { i18n } from './i18n.js';
-import AppContainer from './AppContainer.vue'; // Nuevo contenedor raíz
+import AppContainer from './AppContainer.vue';
 import PrimeVue from 'primevue/config';
 import Material from '@primeuix/themes/material';
 import 'primeicons/primeicons.css';
