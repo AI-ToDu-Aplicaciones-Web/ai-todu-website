@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "benefits": "Beneficios",
+    "pricing": "Planes",
+    "login": "Iniciar Sesión"
+  },
+  "hero": {
+    "title": "Haz que tus proyectos complejos",
+    "titleHighlight": "sean posibles",
+    "subtitle": "Nuestra Inteligencia Artificial desglosa tus metas más grandes en tareas accionables y jerárquicas.",
+    "startFree": "Comienza Gratis",
+    "learnMore": "Saber más"
+  }
+}

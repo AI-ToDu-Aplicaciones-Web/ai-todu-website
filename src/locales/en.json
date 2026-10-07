@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "home": "Home",
+    "benefits": "Benefits",
+    "pricing": "Pricing",
+    "login": "Login"
+  },
+  "hero": {
+    "title": "Make complex projects",
+    "titleHighlight": "possible",
+    "subtitle": "Our Artificial Intelligence breaks down your biggest goals into actionable and hierarchical steps.",
+    "startFree": "Start for Free",
+    "learnMore": "Learn more"
+  }
+}
