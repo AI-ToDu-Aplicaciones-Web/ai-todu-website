@@ -41,4 +41,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sección de Planes de Suscripción (Pricing) con 3 niveles: Básico, Pro y Equipos.
 - Consolidación del Landing Page público de Al ToDu.
 
+## [0.2.0] - 2026-10-07
+
+### Added
+- Bounded Context `iam`: Implementación de la gestión de identidad y accesos.
+- Entidad de dominio `User` y Value Object `UserId`.
+- Capa de infraestructura con `iam-api.js` y `user.assembler.js` para comunicación con el backend.
+- Store de aplicación (`iam_store.js`) para el manejo reactivo del estado de autenticación.
+- Componentes de presentación de Vue (`LoginForm.vue`, `RegisterForm.vue`) y vistas (`SignInView.vue`, `SignUpView.vue`).
+
 
