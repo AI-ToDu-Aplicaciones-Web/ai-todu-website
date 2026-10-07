@@ -50,4 +50,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Store de aplicación (`iam_store.js`) para el manejo reactivo del estado de autenticación.
 - Componentes de presentación de Vue (`LoginForm.vue`, `RegisterForm.vue`) y vistas (`SignInView.vue`, `SignUpView.vue`).
 
+## [0.3.0] - 2026-10-07
+
+### Added
+- Bounded Context `profiles`: Integración de la gestión de perfiles de usuario.
+- Entidad `Profile` y Value Object `ProfileId`.
+- Capa de infraestructura con `profile-api.js` y `profile.assembler.js` para persistencia e instanciación de datos.
+- `profileStore.js` para manejar el estado del perfil en la aplicación.
+- Componentes visuales `ProfileCard.vue` y `ProfileForm.vue` construidos con PrimeVue.
+
 
