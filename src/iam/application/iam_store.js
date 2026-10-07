@@ -1,42 +1,23 @@
 import { reactive } from 'vue';
 import { IamApi } from '../infrastructure/iam-api.js';
-import { UserAssembler } from '../infrastructure/user.assembler.js';
 
 const api = new IamApi();
 
 export const iamStore = reactive({
-    currentUser: null,
-    isAuthenticated: false,
+    isLoading: false,
     errors: [],
 
-    async signIn(username, password) {
+    async registerUser(userData) {
+        this.isLoading = true;
         this.errors = [];
         try {
-            const response = await api.signIn(username, password);
-            const userEntity = UserAssembler.toEntityFromResource(response.data);
-            if (userEntity) {
-                this.currentUser = userEntity;
-                this.isAuthenticated = true;
-                localStorage.setItem('token', userEntity.token);
-            }
+            const response = await api.signUp(userData);
+            return response.data;
         } catch (error) {
-            this.errors.push("Credenciales inválidas o error de conexión.");
+            this.errors.push("Error al registrar el usuario en el servidor.");
+            return null;
+        } finally {
+            this.isLoading = false;
         }
-    },
-
-    async signUp(username, password) {
-        this.errors = [];
-        try {
-            await api.signUp(username, password);
-            await this.signIn(username, password);
-        } catch (error) {
-            this.errors.push("Error al registrar el usuario.");
-        }
-    },
-
-    signOut() {
-        this.currentUser = null;
-        this.isAuthenticated = false;
-        localStorage.removeItem('token');
     }
 });

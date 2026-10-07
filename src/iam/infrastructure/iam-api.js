@@ -1,16 +1,12 @@
-import axios from 'axios';
-
-const http = axios.create({
-    baseURL: 'http://localhost:3000/api/v1/authentication',
-    headers: { 'Content-Type': 'application/json' }
-});
+import http from '../../shared/infrastructure/http-common.js';
 
 export class IamApi {
-    signIn(username, password) {
-        return http.post('/sign-in', { username, password });
+    async signUp(userData) {
+        return await http.post('/users', userData);
     }
 
-    signUp(username, password) {
-        return http.post('/sign-up', { username, password });
+    async signIn(credentials) {
+        const response = await http.get(`/users?username=${credentials.username}&password=${credentials.password}`);
+        return response.data;
     }
 }
