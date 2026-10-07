@@ -21,3 +21,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Implementación del `AiAssistantAssembler` para transformar datos crudos en entidades del dominio.
     - Creación del *Application Service* simulado `aiAssistantStore` para la orquestación de la IA.
     - Componente de presentación `AiTaskGenerator.vue` para interactuar con la generación de tareas (US00X).
+
+## [0.0.5] - 2026-10-07
+
+### Added
+- Arquitectura general de la SPA en Angular aplicando los principios de Domain-Driven Design (DDD).
+- Creación de Bounded Contexts: `iam`, `warehouse-management`, `reporting`, `security-alerts`, `sensor-integration`, `subscription-management` y `company-registration`.
+- Directorio de `server/` con la configuración de `db.json` y `routes.json` para proveer un backend simulado mediante `json-server`.
+- Configuración de los esquemas de entidades, DTOs y *Assemblers* para aislar la capa de UI de la infraestructura de red.
+- Archivos de internacionalización para inglés y español en `public/i18n/`.
+- Flujos de trabajo de GitHub Actions (`azure-static-web-apps.yml`) preparados para el despliegue de IC/DC.
