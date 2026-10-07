@@ -85,3 +85,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Migración del maquetado HTML desde `index.html` hacia el componente principal `src/app.vue` para solucionar el error de sobrescritura de renderizado (pantalla en blanco) provocado por el montaje del framework.
+
+## [0.6.0] - 2026-10-07
+
+### Added
+- Integración de `vue-router` para la navegación entre el Landing Page y el Bounded Context de IAM (Login/Registro).
+- Configuración de `vue-i18n` soportando los idiomas `en_US` y `es_419` cumpliendo con los criterios de internacionalización.
