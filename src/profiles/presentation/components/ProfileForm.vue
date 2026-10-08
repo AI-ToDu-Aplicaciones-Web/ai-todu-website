@@ -38,22 +38,32 @@ const submitForm = async () => {
 </script>
 
 <template>
-  <form @submit.prevent="submitForm" class="flex flex-col gap-4 p-fluid max-w-lg mx-auto mt-4 bg-white p-5 rounded-xl shadow-sm">
-    <h3 class="text-xl font-bold mb-3 text-primary">Información Personal</h3>
-    <div class="field">
-      <label for="firstName">Nombre</label>
-      <InputText id="firstName" v-model="firstName" required />
+  <form @submit.prevent="submitForm" class="flex flex-column gap-4 p-fluid max-w-lg mx-auto mt-4 bg-white p-5 border-round-xl shadow-2">
+    <h3 class="text-xl font-bold mb-2 text-primary text-center">Información Personal</h3>
+
+    <div class="flex flex-column gap-2">
+      <label for="firstName" class="font-medium text-gray-700">Nombre</label>
+      <InputText id="firstName" v-model="firstName" required class="w-full" />
     </div>
-    <div class="field">
-      <label for="lastName">Apellido</label>
-      <InputText id="lastName" v-model="lastName" required />
+
+    <div class="flex flex-column gap-2">
+      <label for="lastName" class="font-medium text-gray-700">Apellido</label>
+      <InputText id="lastName" v-model="lastName" required class="w-full" />
     </div>
-    <div class="field">
-      <label for="bio">Biografía (opcional)</label>
-      <Textarea id="bio" v-model="bio" rows="4" />
+
+    <div class="flex flex-column gap-2">
+      <label for="bio" class="font-medium text-gray-700">Biografía (opcional)</label>
+      <Textarea id="bio" v-model="bio" rows="4" class="w-full" />
     </div>
-    <Button type="submit" :label="profileStore.isLoading ? 'Guardando...' : 'Guardar Perfil'" :disabled="profileStore.isLoading" />
-    <div v-if="profileStore.errors.length" class="text-red-500 mt-2 text-sm">
+
+    <Button
+        type="submit"
+        :label="profileStore.isLoading ? 'Guardando...' : 'Guardar Perfil'"
+        :disabled="profileStore.isLoading"
+        class="w-full mt-2 font-bold justify-content-center"
+    />
+
+    <div v-if="profileStore.errors.length" class="text-red-500 mt-2 text-sm text-center">
       {{ profileStore.errors[0] }}
     </div>
   </form>

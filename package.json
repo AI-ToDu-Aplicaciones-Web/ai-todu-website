@@ -1,7 +1,7 @@
 {
   "name": "landing-page",
   "private": true,
-  "version": "0.7.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@primeuix/themes": "^3.0.1",
     "axios": "^1.20.0",
+    "pinia": "^4.0.3",
     "primeflex": "^4.0.0",
     "primeicons": "^8.0.2",
     "primevue": "^5.0.2",
