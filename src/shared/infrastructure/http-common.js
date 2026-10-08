@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+
 const http = axios.create({
-    baseURL: 'http://localhost:3000',
+
+    baseURL: 'https://tu-mock-api-azure.azure-api.net',
     headers: {
         'Content-Type': 'application/json'
     }
