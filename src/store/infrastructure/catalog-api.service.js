@@ -1,24 +1,37 @@
-import http from '../../shared/infrastructure/http-common.js';
 import { Product } from '../domain/model/product.entity.js';
 
 export class CatalogApiService {
     /**
-     * Obtiene los productos del Mock API y los convierte en entidades del dominio.
+     * Retorna un listado mockeado de productos para poblar el catálogo en el frontend.
      */
     async getAllProducts() {
-        try {
-            const response = await http.get('/api/v1/products');
+        const mockProducts = [
+            {
+                id: 'PROD-001',
+                name: 'Teclado Mecánico Keychron',
+                price: 120.50,
+                imageUrl: 'https://placehold.co/400x300?text=Teclado'
+            },
+            {
+                id: 'PROD-002',
+                name: 'Monitor UltraWide LG',
+                price: 350.00,
+                imageUrl: 'https://placehold.co/400x300?text=Monitor'
+            },
+            {
+                id: 'PROD-003',
+                name: 'Mouse Logi Master 3S',
+                price: 99.99,
+                imageUrl: 'https://placehold.co/400x300?text=Mouse'
+            }
+        ];
 
-            // Actúa como un Assembler: mapea el JSON de infraestructura a tu entidad Product[cite: 20]
-            return response.data.map(item => new Product({
-                id: item.id,
-                name: item.name,
-                price: item.price,
-                imageUrl: item.imageUrl
-            }));
-        } catch (error) {
-            console.error("Error al obtener el catálogo:", error);
-            throw error;
-        }
+        // Mapeamos los datos simulados hacia las entidades de dominio requeridas por la arquitectura
+        return mockProducts.map(item => new Product({
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            imageUrl: item.imageUrl
+        }));
     }
 }

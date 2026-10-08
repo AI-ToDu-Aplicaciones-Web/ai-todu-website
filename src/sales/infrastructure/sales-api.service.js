@@ -1,22 +1,19 @@
-import axios from 'axios';
-import { errorInterceptor } from '../../shared/infrastructure/error.interceptor.js';
-
-const http = axios.create({
-
-    baseURL: 'http://localhost:3000/api/v1',
-    headers: {
-        'Content-Type': 'application/json'
-    }
-});
-
-http.interceptors.response.use(errorInterceptor.onResponse, errorInterceptor.onError);
-
 export class SalesApiService {
-    createPurchaseOrder(payload) {
-        return http.post('/orders', payload);
-    }
+    /**
+     * Simula el envío de la orden de compra hacia el servidor.
+     * @param {Object} payload - Estructura de datos de la orden procesada.
+     */
+    async createPurchaseOrder(payload) {
+        console.log("Enviando orden a la API simulada:", payload);
 
-    getOrders() {
-        return http.get('/orders');
+        // Simulamos una latencia de red de 500ms y un registro exitoso
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve({
+                    status: 201,
+                    data: { success: true, message: "Orden procesada con éxito", order: payload }
+                });
+            }, 500);
+        });
     }
 }
