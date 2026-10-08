@@ -105,3 +105,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integración completa del módulo de autenticación (IAM) conectado al servidor local con persistencia en `db.json`.
 - Selector dinámico de idiomas con soporte para `en_US` y `es_419`.
 - Arquitectura basada estrictamente en Clean Architecture y Domain-Driven Design (DDD).
+
+## [1.0.1] - 2026-10-08
+
+### Added
+- Estructura de contextos delimitados para `sales` y `store` siguiendo DDD.
+
+### Fixed
+- Alineación y contraste de colores en `LandingView`, `SignInView` y `SignUpView`.
