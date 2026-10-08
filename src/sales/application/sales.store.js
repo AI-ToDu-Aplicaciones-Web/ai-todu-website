@@ -1,6 +1,9 @@
 import { reactive } from 'vue';
 import { PurchaseOrder } from '../domain/model/purchase-order.entity.js';
 import { cartStore } from '../../store/application/cart.store.js';
+import { SalesApiService } from '../infrastructure/sales-api.service.js';
+
+const salesApi = new SalesApiService();
 
 export const salesStore = reactive({
     orders: [],
@@ -12,19 +15,17 @@ export const salesStore = reactive({
         this.errors = [];
 
         try {
-            // 1. Instanciamos la entidad del dominio
             const order = new PurchaseOrder({
-                id: crypto.randomUUID(), // Generamos un ID temporal
+                id: crypto.randomUUID(),
                 customerId
             });
 
-            // 2. Aplicamos reglas de negocio
             order.addItemsFromCart(cartStore.items);
             order.submit();
 
-            // (Aquí conectaremos con SalseApiService para mandar el POST a Azure)
+            // Llamada real a la capa de infraestructura
+            await salesApi.createPurchaseOrder(order);
 
-            // 3. Guardamos localmente y limpiamos el carrito
             this.orders.push(order);
             cartStore.clearCart();
 
