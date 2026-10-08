@@ -1,35 +1,11 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
-import LanguageSwitcher from './shared/presentation/components/LanguageSwitcher.vue';
 
 const { t } = useI18n();
 </script>
 
 <template>
   <div>
-    <!-- Navegación -->
-    <header class="flex justify-content-between align-items-center py-3 px-5 shadow-1 fixed top-0 w-full bg-white z-5" role="banner">
-      <div class="text-2xl font-bold text-primary flex align-items-center" aria-label="Logo Al ToDu">
-        <i class="pi pi-check-circle mr-2" aria-hidden="true"></i>Al ToDu
-      </div>
-      <nav class="hidden md:flex gap-4" aria-label="Navegación principal">
-        <a href="#hero" class="text-gray-700 no-underline hover:text-primary font-medium">{{ t('nav.home') }}</a>
-        <a href="#benefits" class="text-gray-700 no-underline hover:text-primary font-medium">{{ t('nav.benefits') }}</a>
-        <a href="#pricing" class="text-gray-700 no-underline hover:text-primary font-medium">{{ t('nav.pricing') }}</a>
-      </nav>
-      <div class="flex align-items-center gap-3">
-        <div class="p-toolbar-group-end">
-          <LanguageSwitcher />
-        </div>
-        <router-link to="/login" class="p-button p-component p-button-primary no-underline font-bold border-round-lg">
-          {{ t('nav.login') }}
-        </router-link>
-      </div>
-    </header>
-
-    <router-link to="/tienda" class="p-button p-component p-button-text text-gray-700 font-medium">
-      Tienda
-    </router-link>
     <!-- Hero Section -->
     <section id="hero" class="flex flex-column align-items-center text-center px-4 pt-8 pb-6 mt-6 bg-blue-50" aria-labelledby="hero-title">
       <h1 id="hero-title" class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-3">
@@ -44,14 +20,13 @@ const { t } = useI18n();
       </div>
     </section>
 
-    <!-- Beneficios Section (Corregido alineación y colores de texto) -->
+    <!-- Beneficios Section -->
     <section id="benefits" class="py-8 px-4 max-w-7xl mx-auto" aria-labelledby="benefits-title">
       <div class="text-center mb-6">
         <h2 id="benefits-title" class="text-3xl font-bold text-gray-900 mb-2">¿Por qué elegir Al ToDu?</h2>
         <p class="text-gray-600 text-lg">Todo lo que necesitas para recuperar el control de tu tiempo.</p>
       </div>
 
-      <!-- Usamos justify-content-center para que las tarjetas se alineen perfectamente -->
       <div class="grid justify-content-center gap-4 mt-5">
         <div class="col-12 md:col-4 p-4 text-center bg-gray-900 shadow-2 border-round-xl flex flex-column justify-content-between">
           <div>
