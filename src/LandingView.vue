@@ -27,6 +27,9 @@ const { t } = useI18n();
       </div>
     </header>
 
+    <router-link to="/tienda" class="p-button p-component p-button-text text-gray-700 font-medium">
+      Tienda
+    </router-link>
     <!-- Hero Section -->
     <section id="hero" class="flex flex-column align-items-center text-center px-4 pt-8 pb-6 mt-6 bg-blue-50" aria-labelledby="hero-title">
       <h1 id="hero-title" class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-3">
