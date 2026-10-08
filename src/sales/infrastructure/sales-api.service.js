@@ -1,30 +1,19 @@
-import http from '../../shared/infrastructure/http-common.js';
-
 export class SalesApiService {
     /**
-     * Envía la orden de compra procesada al backend en Azure.
-     * @param {PurchaseOrder} purchaseOrder - La entidad de dominio validada.
+     * Simula el envío de la orden de compra hacia el servidor.
+     * @param {Object} payload - Estructura de datos de la orden procesada.
      */
-    async createPurchaseOrder(purchaseOrder) {
-        // Mapeamos la entidad de dominio al formato JSON que espera el API
-        const payload = {
-            orderId: purchaseOrder.id,
-            customerId: purchaseOrder._customerId,
-            status: purchaseOrder.status,
-            items: purchaseOrder.items.map(item => ({
-                productId: item.product.id,
-                quantity: item.quantity,
-                unitPrice: item.product.price
-            })),
-            totalAmount: purchaseOrder.calculateTotal()
-        };
+    async createPurchaseOrder(payload) {
+        console.log("Enviando orden a la API simulada:", payload);
 
-        try {
-            const response = await http.post('/api/v1/orders', payload);
-            return response.data;
-        } catch (error) {
-            console.error("Error al registrar la venta en Azure:", error);
-            throw error;
-        }
+        // Simulamos una latencia de red de 500ms y un registro exitoso
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve({
+                    status: 201,
+                    data: { success: true, message: "Orden procesada con éxito", order: payload }
+                });
+            }, 500);
+        });
     }
 }
