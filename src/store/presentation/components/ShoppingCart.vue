@@ -1,6 +1,6 @@
 <script setup>
-import { cartStore } from '../application/cart.store.js';
-import { salesStore } from '../../sales/application/sales.store.js';
+import { cartStore } from '../../application/cart.store.js';
+import { salesStore } from '../../../sales/application/sales.store.js';
 
 // ID temporal para simular la sesión del cliente
 const currentCustomerId = "CUST-001";

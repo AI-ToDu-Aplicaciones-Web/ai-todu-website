@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { CatalogApiService } from '../infrastructure/catalog-api.service.js';
-import { cartStore } from '../application/cart.store.js';
+import { CatalogApiService } from '../../infrastructure/catalog-api.service.js';
+import { cartStore } from '../../application/cart.store.js';
 
 const products = ref([]);
 const catalogApi = new CatalogApiService();
