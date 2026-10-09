@@ -1,9 +1,12 @@
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import { iamStore } from '../../application/iam_store.js';
 import InputText from 'primevue/inputtext';
 import Password from 'primevue/password';
 import Button from 'primevue/button';
+
+const router = useRouter();
 
 const username = ref('');
 const password = ref('');
@@ -11,8 +14,13 @@ const fullName = ref('');
 
 const submitForm = async () => {
   if (username.value && password.value) {
-    // Ajusta esta llamada según el método de tu IAM store para registrarse
-    await iamStore.signUp(username.value, password.value, fullName.value);
+    try {
+      await iamStore.signUp(username.value, password.value, fullName.value);
+      // Redirige al inicio (o a /login) tras un registro exitoso
+      router.push({ name: 'landing' });
+    } catch (error) {
+      console.error("Fallo el registro:", error);
+    }
   }
 };
 </script>
