@@ -7,15 +7,21 @@ export const iamStore = reactive({
     isLoading: false,
     errors: [],
 
-    async registerUser(userData) {
+    async signUp(username, password, fullName) {
         this.isLoading = true;
         this.errors = [];
         try {
+            // Estructura de datos que se enviará y guardará en la MockAPI (/users)
+            const userData = {
+                username,
+                password,
+                fullName
+            };
             const response = await api.signUp(userData);
             return response.data;
         } catch (error) {
             this.errors.push("Error al registrar el usuario en el servidor.");
-            return null;
+            throw error;
         } finally {
             this.isLoading = false;
         }
