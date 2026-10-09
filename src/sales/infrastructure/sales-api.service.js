@@ -1,12 +1,22 @@
+import http from '../../shared/infrastructure/http-common.js';
+
 export class SalesApiService {
-    /**
-     * Simula el envío de la orden de compra hacia el servidor.
-     * @param {Object} payload - Estructura de datos de la orden procesada.
-     */
+
+    async getProducts() {
+        const response = await http.get('/products');
+        return response.data;
+    }
+
+
+    async updateProductStock(id, productData) {
+        const response = await http.put(`/products/${id}`, productData);
+        return response.data;
+    }
+
+
     async createPurchaseOrder(payload) {
         console.log("Enviando orden a la API simulada:", payload);
 
-        // Simulamos una latencia de red de 500ms y un registro exitoso
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve({
