@@ -22,7 +22,6 @@ export class MockApiServer {
 
     #ensureDatabaseFile() {
         if (!fs.existsSync(this.#config.dbPath)) {
-            // Estructura base para AI-ToDu
             fs.writeFileSync(this.#config.dbPath, JSON.stringify({categories: [], tutorials: [], users: []}, null, 2));
         }
     }
