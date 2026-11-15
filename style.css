@@ -798,3 +798,34 @@ a {
         font-size: 2rem;
     }
 }
+
+/* Videos section */
+#videos {
+    background-color: var(--bg-light);
+}
+
+#videos .video-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#videos .video-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+#videos .video-card h3 {
+    color: var(--primary-navy);
+}
+
+#videos .video-card p {
+    flex-grow: 1;
+}
+
+#videos .video-container {
+    background: var(--primary-navy);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
