@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-# Changelog
+## [3.0.0] - 2026-11-15
 
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+### Added
+- Production Release `v3.0.0` of the **AI-ToDu Responsive Landing Page**.
+- Bilingual i18n support (`en_US` by default and `es_419`), WCAG high-contrast feature cards, and ARIA accessibility attributes.
+- Direct Call-To-Action (CTA) integration with the AI-ToDu Web Application deployed on Microsoft Azure (`ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net`).
+- Role-based segment cards (Business Owners vs. Warehouse Staff), subscription plans selector, and ACM/IEEE & CIP Ethics Terms Modal.
 
 ## [2.0.0] - 2026-11-02
 
