@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <header class="sticky-header" role="banner">
@@ -186,14 +186,24 @@
         <div class="segments-grid">
             <div class="video-card">
                 <h3 data-i18n="videos.productTitle">Video About-the-Product</h3>
-                <div class="video-placeholder">
-                    <span>▶ AI-ToDu Platform Demo & Value Proposition</span>
+                <p data-i18n="videos.productDesc">Promotional tour of AI-ToDu features, user flows, and validation testimonials.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/MQLYOIeeO4Q"
+                            title="AI-ToDu – About the Product"
+                            loading="lazy"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
             </div>
             <div class="video-card">
                 <h3 data-i18n="videos.teamTitle">Video About-the-Team (IA-INNOVATION)</h3>
-                <div class="video-placeholder">
-                    <span>▶ Meet Bernal, Chui, Huayra, Lacuta & Yi (UPC)</span>
+                <p data-i18n="videos.teamDesc">Our collaborative software engineering process, ABET Student Outcome 5 reflections, and team members.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dInEl500POY"
+                            title="AI-ToDu – About the Team (IA-INNOVATION)"
+                            loading="lazy"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -238,7 +248,7 @@
 
 <div id="ethics-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="ethics-title">
     <div class="modal-box">
-        <h2 id="ethics-title">Terms of Service & Software Engineering Ethics</h2>
+        <script src="main.js"></script>
         <p><strong>IA-INNOVATION</strong> operates strictly under the <em>ACM/IEEE Software Engineering Code of Ethics</em> and the <em>Colegio de Ingenieros del Perú (CIP) Code of Deontology</em>:</p>
         <ul>
             <li><strong>Tenant Privacy & Security:</strong> Every MYPE's inventory, financial balance, and user credentials are logically isolated and protected.</li>
