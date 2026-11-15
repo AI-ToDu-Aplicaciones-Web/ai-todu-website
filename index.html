@@ -4,245 +4,127 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI-ToDu | B2B SaaS Inventory, Sales & Logistics Platform for MSEs</title>
-    <meta name="description" content="AI-ToDu is the B2B SaaS platform that centralizes logistics, inventory, and billing for Micro and Small Enterprises (MYPES)." />
-    <meta name="keywords" content="software inventario MYPE, ERP para pequeñas empresas, control de almacén, facturación electrónica, logística B2B Perú" />
-    <meta name="author" content="IA-INNOVATION" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="AI-ToDu is the B2B SaaS platform that centralizes warehouse inventory, electronic billing, and B2B logistics for Micro and Small Enterprises (MYPES)." />
+    <meta name="keywords" content="MYPE ERP, inventory management, B2B logistics, warehouse software, electronic billing Peru, AI-ToDu" />
+    <meta name="author" content="IA-INNOVATION Startup Team" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-<header class="sticky-header" role="banner">
-    <nav class="navbar container" role="navigation" aria-label="Main Navigation">
-        <a href="#hero" class="brand" aria-label="AI-ToDu Home">
-            <span class="brand-badge">AI</span>ToDu
-        </a>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Mobile Navigation" aria-expanded="false">☰</button>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#purpose" data-i18n="nav.purpose">Platform</a></li>
-            <li><a href="#segments" data-i18n="nav.segments">Solutions</a></li>
-            <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
-            <li><a href="#videos" data-i18n="nav.videos">About Us</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-            <button id="lang-switcher" class="btn-lang" aria-label="Switch Language between English and Spanish">EN | ES</button>
-            <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net" class="btn-secondary" aria-label="Log in to AI-ToDu Web App" data-i18n="nav.login">Log In</a>
-            <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net" class="btn-cta" aria-label="Start Free Trial on Web App" data-i18n="nav.cta">Free Trial</a>
-        </div>
-    </nav>
-</header>
-<section id="hero" class="hero-section" aria-labelledby="hero-title">
-    <div class="container hero-grid">
-        <div class="hero-content">
-            <span class="badge-pill" data-i18n="hero.badge">IA-INNOVATION • B2B SaaS Ecosystem v3.0</span>
-            <h1 id="hero-title" class="hero-title">
-                <span data-i18n="hero.title">The Central Nervous System for</span>
-                <span class="text-teal" data-i18n="hero.titleHighlight">your MSE (MYPE)</span>
-            </h1>
-            <p class="hero-subtitle" data-i18n="hero.pitch">
-                Centralize your warehouse inventory, commercial POS sales, and dispatch manifests in one intuitive platform. Eliminate manual notebooks, prevent stockouts, and monitor your real profitability in real time.
-            </p>
-            <div class="hero-actions">
-                <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net" class="btn-cta btn-large" aria-label="Start Free Trial Now" data-i18n="hero.ctaPrimary">Start Free Trial</a>
-                <a href="#pricing" class="btn-secondary-light btn-large" aria-label="Explore Subscription Plans" data-i18n="hero.ctaSecondary">View Pricing Plans</a>
-            </div>
-            <div class="hero-stats" aria-label="Platform Impact Indicators">
-                <div><strong>-50%</strong><span data-i18n="hero.stat1">Weekly Inventory Time</span></div>
-                <div><strong>99.9%</strong><span data-i18n="hero.stat2">SKU Traceability</span></div>
-                <div><strong>24/7</strong><span data-i18n="hero.stat3">Live Financial Balance</span></div>
-            </div>
-        </div>
-
-        <!-- App Screenshot / Live Mockup Representation -->
-        <div class="hero-mockup" role="img" aria-label="Screenshot of AI-ToDu Web Application Dashboard">
-            <div class="mockup-bar">
-                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                <span class="mockup-domain">ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net</span>
-            </div>
-            <div class="mockup-content">
-                <div class="mockup-kpis">
-                    <div class="m-card">
-                        <small>Inventory Valuation</small>
-                        <strong>S/ 48,920.00</strong>
-                        <span class="tag-ok">+18.4% Healthy</span>
-                    </div>
-                    <div class="m-card">
-                        <small>Active Alerts</small>
-                        <strong>2 Low Stock SKUs</strong>
-                        <span class="tag-warn">Action Required</span>
-                    </div>
-                </div>
-                <div class="mockup-rows">
-                    <div class="m-row header"><span>SKU</span><span>Item</span><span>Location</span><span>Status</span></div>
-                    <div class="m-row"><span>SKU-TEX-01</span><span>Cotton Roll Red 50m</span><span>Shelf A-02</span><span class="b-ok">AVAILABLE (85)</span></div>
-                    <div class="m-row"><span>SKU-GAS-04</span><span>Olive Oil 5L</span><span>Shelf B-01</span><span class="b-warn">LOW STOCK (6)</span></div>
-                    <div class="m-row"><span>SKU-DIS-09</span><span>Dairy Box 24un</span><span>Cold C-04</span><span class="b-err">QUARANTINE (12)</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="purpose" class="section" aria-labelledby="purpose-title">
-    <div class="container">
-        <div class="section-header">
-            <h2 id="purpose-title" data-i18n="purpose.title">Why Choose AI-ToDu?</h2>
-            <p data-i18n="purpose.subtitle">Built under Domain-Driven Design to unify your entire supply chain without ERP complexity.</p>
-        </div>
-        <div class="features-grid">
-            <article class="feature-card">
-                <div class="icon-circle">📦</div>
-                <h3 data-i18n="purpose.f1Title">Warehouse & Inventory Control</h3>
-                <p data-i18n="purpose.f1Desc">Real-time SKU tracking, shelf locations, lot control, quarantine protection, and automated low-stock alerts.</p>
-            </article>
-            <article class="feature-card">
-                <div class="icon-circle">💳</div>
-                <h3 data-i18n="purpose.f2Title">Sales & Automated Billing</h3>
-                <p data-i18n="purpose.f2Desc">Register commercial transactions with automatic 18% IGV calculation and instant stock deduction.</p>
-            </article>
-            <article class="feature-card">
-                <div class="icon-circle">🚚</div>
-                <h3 data-i18n="purpose.f3Title">Logistics & IoT Dispatch</h3>
-                <p data-i18n="purpose.f3Desc">Create consolidated Shipment Manifests, assign routes and waypoints, and monitor GPS/temperature telemetry.</p>
-            </article>
-        </div>
-    </div>
-</section>
-<section id="segments" class="section bg-navy" aria-labelledby="segments-title">
-    <div class="container">
-        <div class="section-header light">
-            <h2 id="segments-title" data-i18n="segments.title">Tailored for Every Role in Your Business</h2>
-            <p data-i18n="segments.subtitle">Specific workflows designed for decision makers and operational warehouse staff.</p>
-        </div>
-        <div class="segments-grid">
-            <div class="segment-box">
-                <span class="segment-tag" data-i18n="segments.ownerTag">Segment 1 • Decision Makers</span>
-                <h3 data-i18n="segments.ownerTitle">Business Owners & Managers (Carlos)</h3>
-                <p data-i18n="segments.ownerDesc">Gain 24/7 peace of mind. View consolidated financial reports, net profitability, shrinkage alerts, and role-based audit trails from your phone or laptop.</p>
-                <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net?view=dashboard" class="btn-cta" aria-label="Go to Executive Dashboard" data-i18n="segments.ownerCta">Go to Executive Dashboard →</a>
-            </div>
-            <div class="segment-box">
-                <span class="segment-tag" data-i18n="segments.workerTag">Segment 2 • Operational Force</span>
-                <h3 data-i18n="segments.workerTitle">Warehouse & Logistics Staff (Miguel)</h3>
-                <p data-i18n="segments.workerDesc">Say goodbye to messy notebooks and overtime counting. Register merchandise entries in 2 clicks, find shelf locations instantly, and confirm dispatches.</p>
-                <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net?view=warehouse" class="btn-cta" aria-label="Go to Warehouse Module" data-i18n="segments.workerCta">Go to Inventory Module →</a>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="pricing" class="section bg-light" aria-labelledby="pricing-title">
-    <div class="container">
-        <div class="section-header">
-            <h2 id="pricing-title" data-i18n="pricing.title">Transparent SaaS Subscription Plans (US01)</h2>
-            <p data-i18n="pricing.subtitle">Choose the plan that fits your MYPE's operational volume.</p>
-        </div>
-        <div class="features-grid">
-            <div class="pricing-card">
-                <h3 data-i18n="pricing.p1Name">Starter MYPE</h3>
-                <div class="price-val">S/ 79<span>/mo</span></div>
-                <p class="price-desc" data-i18n="pricing.p1Desc">For single-location stores and small workshops.</p>
-                <ul class="plan-list">
-                    <li>✓ Up to 500 SKUs in Warehouse</li>
-                    <li>✓ 3 IAM User Accounts</li>
-                    <li>✓ Core POS Sales & Stock Sync</li>
-                </ul>
-                <button class="btn-secondary full-w select-plan" data-plan="Starter MYPE" data-i18n="pricing.selectBtn">Select Plan</button>
-            </div>
-
-            <div class="pricing-card popular">
-                <span class="ribbon" data-i18n="pricing.popular">MOST POPULAR</span>
-                <h3 data-i18n="pricing.p2Name">Growth Business</h3>
-                <div class="price-val">S/ 149<span>/mo</span></div>
-                <p class="price-desc" data-i18n="pricing.p2Desc">For growing restaurants, textile MYPES & distributors.</p>
-                <ul class="plan-list">
-                    <li>✓ Unlimited SKUs, Lots & Quarantine</li>
-                    <li>✓ 10 IAM Users & Role Permissions</li>
-                    <li>✓ Shipment Manifests & Profitability KPIs</li>
-                </ul>
-                <button class="btn-cta full-w select-plan" data-plan="Growth Business" data-i18n="pricing.selectBtn">Select Plan</button>
-            </div>
-
-            <div class="pricing-card">
-                <h3 data-i18n="pricing.p3Name">Enterprise IoT</h3>
-                <div class="price-val">S/ 299<span>/mo</span></div>
-                <p class="price-desc" data-i18n="pricing.p3Desc">For multi-warehouse logistics and cold-chain fleets.</p>
-                <ul class="plan-list">
-                    <li>✓ Multi-Tenant Warehouses & Unlimited Users</li>
-                    <li>✓ Real-Time GPS & Temp IoT Telemetry</li>
-                    <li>✓ RESTful API Integration & 24/7 Support</li>
-                </ul>
-                <button class="btn-secondary full-w select-plan" data-plan="Enterprise IoT" data-i18n="pricing.selectBtn">Select Plan</button>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="videos" class="section" aria-labelledby="videos-title">
-    <div class="container">
-        <div class="section-header">
-            <h2 id="videos-title" data-i18n="videos.title">Discover AI-ToDu & IA-INNOVATION</h2>
-            <p data-i18n="videos.subtitle">Watch our product walkthrough and meet the software engineering team behind the platform.</p>
-        </div>
-        <div class="segments-grid">
-            <div class="video-card">
-                <h3 data-i18n="videos.productTitle">Video About-the-Product</h3>
-                <p data-i18n="videos.productDesc">Promotional tour of AI-ToDu features, user flows, and validation testimonials.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/MQLYOIeeO4Q"
-                            title="AI-ToDu – About the Product"
-                            loading="lazy"
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="video-card">
-                <h3 data-i18n="videos.teamTitle">Video About-the-Team (IA-INNOVATION)</h3>
-                <p data-i18n="videos.teamDesc">Our collaborative software engineering process, ABET Student Outcome 5 reflections, and team members.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dInEl500POY"
-                            title="AI-ToDu – About the Team (IA-INNOVATION)"
-                            loading="lazy"
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="contact" class="section bg-light" aria-labelledby="contact-title">
-    <div class="container contact-grid">
-        <div>
-            <h2 id="contact-title" data-i18n="contact.title">Start Your Digital Transformation Today</h2>
-            <p data-i18n="contact.subtitle">Leave your business details or launch the web application directly.</p>
-            <ul class="contact-info">
-                <li><strong>Email:</strong> contact@ia-innovation.com.pe</li>
-                <li><strong>Phone:</strong> +51 1 640-9000 / +51 987 654 321</li>
-                <li><strong>HQ:</strong> Av. Primavera 2390, Santiago de Surco, Lima - Perú</li>
+<header class="navbar" role="banner">
+    <div class="container nav-content">
+        <a href="#hero" class="brand" aria-label="AI-ToDu Home">AI-<span>ToDu</span></a>
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="#features" data-i18n="nav.features">Features</a></li>
+                <li><a href="#segments" data-i18n="nav.segments">Segments</a></li>
+                <li><a href="#pricing" data-i18n="nav.pricing">Plans</a></li>
+                <li><a href="#videos" data-i18n="nav.videos">About Us</a></li>
             </ul>
+        </nav>
+        <div class="nav-actions">
+            <button id="lang-switch" class="btn-outline" aria-label="Switch Language">ES</button>
+            <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net" class="btn-primary" data-i18n="nav.cta">Launch Web App</a>
         </div>
-        <form id="onboarding-form" class="contact-form" aria-label="MYPE Onboarding Form">
-            <label for="mypeName" data-i18n="contact.nameLabel">Company / MYPE Name</label>
-            <input id="mypeName" type="text" required placeholder="e.g., Distribuidora Mendoza S.A.C." />
-            <label for="mypeEmail" data-i18n="contact.emailLabel">Corporate Email</label>
-            <input id="mypeEmail" type="email" required placeholder="gerencia@mype.pe" />
-            <label for="chosenPlan" data-i18n="contact.planLabel">Selected Subscription Plan</label>
-            <input id="chosenPlan" type="text" value="Growth Business" readonly />
-            <button type="submit" class="btn-cta full-w" data-i18n="contact.submitBtn">Continue to AI-ToDu Web App →</button>
-        </form>
     </div>
-</section>
-<footer class="app-footer" role="contentinfo">
-    <div class="container footer-grid">
-        <div>
-            <span class="brand"><span class="brand-badge">AI</span>ToDu</span>
-            <p class="footer-copy">© 2026 IA-INNOVATION. UPC Software Engineering (1ASI0730 - NRC 8088).</p>
+</header>
+
+<main>
+    <section id="hero" class="hero-section">
+        <div class="container hero-grid">
+            <div>
+                <span class="badge" data-i18n="hero.badge">B2B SaaS Platform v2.0</span>
+                <h1 data-i18n="hero.title">Smart Inventory, Sales & Logistics Control for Growing MSEs</h1>
+                <p data-i18n="hero.subtitle">Eliminate stockouts, quarantine losses, and manual dispatch errors with real-time traceability.</p>
+                <div class="hero-ctas">
+                    <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net/login?role=owner" class="btn-primary" data-i18n="hero.ctaOwner">Start as Business Owner</a>
+                    <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net/login?role=operator" class="btn-outline" data-i18n="hero.ctaOperator">Warehouse Operator Portal</a>
+                </div>
+            </div>
+            <div class="hero-card" aria-label="Live Telemetry Preview">
+                <h3>Live Warehouse KPIs</h3>
+                <p><strong>SKU-TEX-001:</strong> 85 Rolls (Available)</p>
+                <p><strong>SKU-GAS-204:</strong> 6 Units (Low Stock Alert)</p>
+                <p><strong>Active Manifests:</strong> MAN-2026-001 (19.5 °C)</p>
+            </div>
         </div>
-        <div class="footer-links" aria-label="Social Media and Ethical Terms Links">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="Visit our LinkedIn">LinkedIn</a>
-            <a href="https://github.com/AI-ToDu-Aplicaciones-Web" target="_blank" rel="noopener" aria-label="Visit our GitHub Organization">GitHub</a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook">Facebook</a>
-            <a href="#terms" id="open-ethics-modal" aria-label="Read Terms and Conditions and Code of Ethics">Terms & Conditions (ACM/IEEE & CIP Ethics)</a>
+    </section>
+
+    <section id="features" class="section container">
+        <h2 data-i18n="features.title">Core Bounded Contexts</h2>
+        <div class="grid-3">
+            <article class="card">
+                <h3 data-i18n="features.wTitle">Warehouse & Stock</h3>
+                <p data-i18n="features.wDesc">Real-time SKU tracking, minimum stock alerts, and quarantine lock protection.</p>
+            </article>
+            <article class="card">
+                <h3 data-i18n="features.sTitle">Sales & Peruvian IGV</h3>
+                <p data-i18n="features.sDesc">Automated 18% IGV calculation and instant stock deduction upon order confirmation.</p>
+            </article>
+            <article class="card">
+                <h3 data-i18n="features.lTitle">Logistics & Telemetry</h3>
+                <p data-i18n="features.lDesc">Route dispatch manifests and cold-chain temperature monitoring.</p>
+            </article>
         </div>
+    </section>
+
+    <section id="segments" class="section bg-light">
+        <div class="container">
+            <h2 data-i18n="segments.title">Built for Target Segments</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>MSE Business Owners (Admin)</h3>
+                    <p>Full visibility of financial revenue, IGV taxes, and critical restock alerts.</p>
+                    <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net/warehouse" class="btn-primary">Go to Executive Dashboard</a>
+                </div>
+                <div class="card">
+                    <h3>Warehouse & Dispatch Operators</h3>
+                    <p>Fast SKU lookup, quarantine toggles, and shipment manifest confirmation.</p>
+                    <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net/logistics" class="btn-primary">Go to Dispatch Console</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section container">
+        <h2 data-i18n="pricing.title">Transparent Subscription Plans</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Starter MYPE</h3>
+                <p class="price">$19 <span>/ month</span></p>
+                <ul><li>Up to 500 SKUs</li><li>Sales & IGV Billing</li><li>2 Operator Accounts</li></ul>
+                <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net/login" class="btn-outline">Select Starter</a>
+            </div>
+            <div class="card featured">
+                <h3>Growth Business</h3>
+                <p class="price">$49 <span>/ month</span></p>
+                <ul><li>Unlimited SKUs & Lots</li><li>Cold-Chain Telemetry</li><li>Priority API Access</li></ul>
+                <a href="https://ai-todu-frfmege2a3ephedb.westus-01.azurewebsites.net/login" class="btn-primary">Select Growth</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="section bg-light">
+        <div class="container grid-2">
+            <div class="card">
+                <h3>About the Product</h3>
+                <div class="video-placeholder" role="region" aria-label="About the Product Video">
+                    <iframe width="100%" height="260" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="About the Product" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="card">
+                <h3>About the Team</h3>
+                <div class="video-placeholder" role="region" aria-label="About the Team Video">
+                    <iframe width="100%" height="260" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="About the Team" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+    <div class="container footer-content">
+        <p>© 2026 IA-INNOVATION - AI-ToDu. All rights reserved.</p>
+        <button id="open-ethics-modal" class="link-btn">Terms of Service & ACM/IEEE - CIP Ethics</button>
     </div>
 </footer>
 
@@ -251,13 +133,13 @@
         <h2 id="ethics-title">Terms of Service & Software Engineering Ethics</h2>
         <p><strong>IA-INNOVATION</strong> operates strictly under the <em>ACM/IEEE Software Engineering Code of Ethics</em> and the <em>Colegio de Ingenieros del Perú (CIP) Code of Deontology</em>:</p>
         <ul>
-            <li><strong>Tenant Privacy & Security:</strong> Every MYPE's inventory, financial balance, and user credentials are logically isolated and protected.</li>
-            <li><strong>Algorithmic & Operational Transparency:</strong> Stock movements and sales calculations are auditable with full traceability (US10).</li>
-            <li><strong>Accessibility & Inclusion:</strong> Compliant with WCAG contrast standards, responsive layouts, and bilingual support (<code>en_US</code> / <code>es_419</code>).</li>
+            <li><strong>Tenant Privacy & Security:</strong> Logical isolation of inventory, transactions, and credentials.</li>
+            <li><strong>Operational Transparency:</strong> Auditable stock movements and tax calculations.</li>
+            <li><strong>Inclusive Design (i18n & a11y):</strong> Bilingual interface (<code>en_US</code> / <code>es_419</code>) and WCAG contrast compliance.</li>
         </ul>
-        <button id="close-ethics-modal" class="btn-cta">Accept & Close</button>
+        <button id="close-ethics-modal" class="btn-primary">Accept & Close</button>
     </div>
 </div>
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
